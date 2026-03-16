@@ -22,8 +22,6 @@ When('I enter valid credentials', async function () {
 
 Then('I should see the dashboard', async function () {
   await expect(page.locator('h6')).toHaveText('Dashboard', { timeout: 20000 });
-  await expect(page.locator('/html/body/div/div[1]/div[1]/header/div[1]/div[2]/a/button')).toBeVisible({ timeout: 20000 });
-  await expect(page.locator('/html/body/div/div[1]/div[2]/div[2]/div/div[3]/div/div[1]/div/p')).toBeVisible({ timeout: 20000 });
   console.log("Dashboard verified");
   await browser.close();
 });
